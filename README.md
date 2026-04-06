@@ -5,21 +5,13 @@ Given integers L, R, and K, count how many numbers in the range [L, R] are divis
 
 Approach:
 Iterate from L to R, check divisibility using modulo, and maintain a counter.
-
-Time Complexity: O(R - L)
-Space Complexity: O(1)
-
-2. Digit Constraints with Prime Sum
-
+Digit Constraints with Prime Sum
 Count numbers in a range that:
-
 Are divisible by K
 Do not contain digit 0
 Have a sum of digits that is prime
-
 Approach:
 For each number:
-
 Extract digits using modulo and division
 Skip if any digit is 0
 Compute digit sum
@@ -28,7 +20,7 @@ Check if sum is prime
 Time Complexity: O(R - L)
 Space Complexity: O(1)
 
-3. Roll-Seed Lock
+2. Roll-Seed Lock
 
 Apply transformations to a number N for 3 steps:
 
@@ -46,7 +38,7 @@ Use a loop running exactly 3 times and apply conditions accordingly. Extract mid
 Time Complexity: O(1)
 Space Complexity: O(1)
 
-4. Mirror Corridor
+3. Mirror Corridor
 
 Find the smallest non-negative integer X such that:
 
@@ -64,7 +56,7 @@ Check palindrome using numeric reversal
 Time Complexity: O(100000 × digits)
 Space Complexity: O(1)
 
-5. Fare Calculator
+4. Fare Calculator
 
 Compute ride fare using multiple rules:
 
@@ -80,7 +72,7 @@ Apply conditions in strict order and use arithmetic tricks to round up without b
 Time Complexity: O(1)
 Space Complexity: O(1)
 
-6. Skipping Numbers
+5. Skipping Numbers
 
 Find the smallest integer m such that the sum of numbers from 1 to m (excluding multiples of seed + 2) is at least N.
 
@@ -93,7 +85,7 @@ Accumulate sum until it reaches or exceeds N
 Time Complexity: O(m)
 Space Complexity: O(1)
 
-7. Contest Score Judge
+6. Contest Score Judge
 
 Compute a score using:
 
