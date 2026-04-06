@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Question 5</title>
+</head>
+<body>
+<script>
+function user_input_q5() {
+    let N = parseInt(prompt("Enter n"));
+    let seed = parseInt(prompt("Enter seed"));
+    if (1 <= N && N <= 1000000 && 0 <= seed && seed <= 9) {
+        let skip = seed + 2;
+        let sum = 0;
+        let m = 0;
+        while (sum < N) {
+            m++;
+            if (m % skip != 0) {
+                sum += m;
+            }
+        }
+        alert(m + " " + sum);
+    }
+}
+</script>
+<button onclick="user_input_q5()">q5 enter n and seed</button>
+</body>
+</html>
+]

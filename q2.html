@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Question 2</title>
+</head>
+<body>
+<script>
+function user_input_q2() {
+
+    let N = parseInt(prompt("Enter n"));
+    let seed = parseInt(prompt("Enter seed"));
+    for (let i = 0; i < 3; i++) {
+        if (N % 2 == 0) {
+            N = Math.floor(N / 2) + seed;
+        } else {
+            N = N * 3 - seed;
+        }
+    }
+    if (N >= 100 && N <= 999) {
+        let middle = Math.floor(N / 10) % 10;
+
+        if (middle == seed) {
+            alert("YES");
+            alert(N);
+            return;
+        }
+    }
+    alert("NO");
+    alert(N);
+}
+</script>
+<button onclick="user_input_q2()">q2 enter n and seed</button>
+</body>
+</html>

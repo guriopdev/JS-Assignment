@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Question 6</title>
+</head>
+<body>
+<script>
+function user_input_q6() {
+    let a = parseInt(prompt("Enter correct answers (a):"));
+    let b = parseInt(prompt("Enter partially correct answers (b):"));
+    let c = parseInt(prompt("Enter wrong answers (c):"));
+    if (0 <= a && a <= 100 && 0 <= b && b <= 100 && 0 <= c && c <= 100) {
+        let score = 3 * a + b - 2 * c;
+        if (score < 0) {
+            score = 0;
+        }
+        if (a + b + c > 50) {
+            score -= 10;
+        }
+        let status;
+        if (score >= 60) {
+            status = "PASS";
+        } else {
+            status = "FAIL";
+        }
+        alert(score + " " + status);
+    }
+}
+</script>
+
+<button onclick="user_input_q6()">Run</button>
+</body>
+</html>

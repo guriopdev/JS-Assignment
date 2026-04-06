@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Question 1</title>
+</head>
+<body>
+<script>
+function user_input_q1() {
+    let L = parseInt(prompt("Please enter a number L:"));
+    let R = parseInt(prompt("Please enter a number R:"));
+    let k = parseInt(prompt("Please enter a number k:"));
+
+    if (1 <= L && L <= R && R <= 100000000 && 2 <= k && k <= 9) {
+        let count = 0;
+        for (let i = L; i <= R; i++) {
+            if (i % k === 0) {
+                let temp = i;
+                let sum = 0;
+                while (temp > 0) {
+                    let rem = temp % 10;
+                    if (rem === 0) {
+                        sum = 0;
+                        break;
+                    }
+                    sum = sum+ rem;
+                    temp = Math.floor(temp/ 10);
+                }
+                if (sum > 1) {
+                    let isPrime = true;
+                    for (let n = 2; n <= Math.sqrt(sum); n++) {
+                        if (sum % n === 0) {
+                            isPrime = false;
+                            break;
+                        }
+                    }
+                    if (isPrime) {
+                        count++;
+                    }
+                }
+            }
+        }
+        console.log(count);
+    }
+}
+</script>
+<button onclick="user_input_q1()">Click here to enter L, R and k</button>
+</body>
+</html>

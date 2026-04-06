@@ -1,0 +1,30 @@
+<html>
+<body>
+<script>
+function user_input_q3() {
+    let N = parseInt(prompt("Enter n"));
+    let K = parseInt(prompt("Enter k"));
+    function isPalindrome(num) {
+        let original = num;
+        let reversed = 0;
+        while (num > 0) {
+            let rem = num % 10;
+            reversed = reversed * 10 + rem;
+            num = Math.floor(num / 10);
+        }
+        return original == reversed;
+    }
+    for (let X = 0; X <= 100000; X++) {
+        let num = N + X;
+        if (num % K == 0 && isPalindrome(num)) {
+            alert(X);
+            return;
+        }
+    }
+    alert(-1);
+}
+</script>
+
+<button onclick="user_input_q3()">q3 enter n and k</button>
+</body>
+</html>
